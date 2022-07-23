@@ -7,11 +7,11 @@ void setup() {
 
 void loop() {
   if (digitalRead(8) == LOW) {
-    Serial.println("0");
-   
-  } else if(digitalRead(8) == HIGH){
     Serial.println("1");
-    
+    digitalWrite(5, HIGH);
+  } else if(digitalRead(8) == HIGH){
+    Serial.println("0");
+    digitalWrite(5, LOW);
   }
-
+  
 }
